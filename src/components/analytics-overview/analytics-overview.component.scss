@@ -1,0 +1,57 @@
+@import '../../app-colors.scss';
+
+.analytics-overview {
+
+  .overview-container {
+    margin-top: 1rem;
+  }
+
+  .website-visited {
+    background-color: $overview-visits-card-back-color;
+    color: $overview-visits-card-fore-color;
+
+    .card-icon {
+      background-color: #f1be96;
+    }
+  }
+
+  .new-signups {
+    background-color: $overview-signups-card-back-color;
+    color: $overview-signups-card-fore-color;
+
+    .card-icon {
+      background-color: #abe7f7;
+    }
+  }
+
+  .new-orders {
+    background-color: $overview-orders-card-back-color;
+    color: $overview-orders-card-fore-color;
+
+    .card-icon {
+      background-color: #bffbbf;
+    }
+  }
+
+  .new-enquires {
+    background-color: $overview-enquiry-card-back-color;
+    color: $overview-enquiry-card-fore-color;
+
+    .card-icon {
+      background-color: #bfc6f9;
+    }
+  }
+
+  .profit {
+    background-color: $overview-profit-card-back-color;
+    color: $overview-profit-card-fore-color;
+
+    .card-icon {
+      background-color: #a1efa6;
+    }
+  }
+
+  .card:last-child {
+    margin-right: 0;
+  }
+}

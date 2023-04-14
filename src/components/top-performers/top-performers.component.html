@@ -1,0 +1,26 @@
+<div class="flex-start flex-col">
+  <div class="section-title">Top Performers</div>
+
+  <div class="performers-list">
+    <div *ngFor="let user of performers" class="flex-start performer-list-item">
+      
+      <div class="image-col">
+        <div class="user-image">
+          <img [src]="user?.imageSrc" alt=''/>
+        </div>
+      </div>
+
+      <div class="detail-col">
+        <div class="font-bold">{{user?.name}}</div>
+        <div class="light-text small-text">{{user?.designation}}</div>
+      </div>
+
+      <div class="income-col">
+        <div [ngStyle]="{'width': user?.income / maxRevenue * 100 + '%' }" class="income-bar flex-center v-center">
+          {{'+$' + (user?.income | number:'1.0-2')}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

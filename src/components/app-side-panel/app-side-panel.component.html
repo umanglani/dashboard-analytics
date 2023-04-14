@@ -1,0 +1,15 @@
+<div class="app-side-panel">
+
+  <div class="flex-start flex-col top-items">
+    <div *ngFor="let item of panelItems" class="panel-item enable-hover" [ngClass]="{ 'active': item?.active }">
+      <fa-icon [icon]="item?.icon"></fa-icon>
+    </div>
+  </div>
+
+  <div class="flex-end flex-col bottom-items">
+    <div *ngFor="let item of socialItems" class="panel-item enable-hover">
+      <fa-icon [icon]="item"></fa-icon>
+    </div>
+  </div>
+
+</div>

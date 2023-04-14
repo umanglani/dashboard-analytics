@@ -1,0 +1,225 @@
+@import './app-colors.scss';
+
+html {
+  display: flex;
+  display: -ms-flexbox;
+
+  justify-content: center;
+  margin: auto;
+  font-size: 62.5%; // 10px
+
+  padding-left: 10rem; // considering left side panel
+}
+
+body {
+  background-color: $app-background;
+  color: $primary-text-color;
+  font-size: 1.5rem;
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  padding: 2rem 4rem 2rem 0;
+
+  width: 100%;
+}
+
+.flex-start,
+.flex-center,
+.flex-end {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-center {
+  justify-content: center;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-col {
+  flex-flow: column wrap;
+}
+
+.grid-2-cols,
+.grid-3-cols {
+  display: grid;
+  grid-row-gap: 0.5rem;
+  width: 100%;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 48%);
+  grid-column-gap: 4%;
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 32%);
+  grid-column-gap: 2%;
+}
+
+.v-center {
+  align-items: center;
+}
+.v-baseline {
+  align-items: baseline;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.enable-hover {
+  cursor: pointer;
+}
+
+.app-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.small-text {
+  font-size: 1rem;
+}
+
+.light-text {
+  color: $secondary-text-color;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.card {
+  @extend .flex-center;
+  @extend .v-center;
+  @extend .flex-col;
+
+  border-radius: 1.5rem;
+
+  position: relative;
+
+  padding: 1rem 3.5rem;
+  margin-right: 1.5rem;
+
+  .card-title,
+  .card-sub-title,
+  .card-additional-detail {
+    padding: 0.5rem 0;
+  }
+
+  .card-title {
+    font-size: 3rem;
+  }
+
+  .card-sub-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .card-additional-detail {
+    font-size: 1.2rem;
+    color: $secondary-text-color;
+    @extend .text-center;
+  }
+
+  .card-icon {
+    position: absolute;
+    content: '';
+    top: -0.3rem;
+    right: 0rem;
+    font-size: 1.2rem;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.user-image {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  // background-color: $secondary-text-color;
+  overflow: hidden;
+
+  @extend .flex-center;
+  @extend .v-center;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.app-side-panel {
+  position: fixed;
+  left: 1rem;
+  top: 0.5rem;
+
+  height: calc(100% - 6rem);
+  border-radius: 2rem;
+
+  padding: 2.5rem;
+
+  background-color: rgba(0, 0, 0, 80%);
+  color: $side-panel-icon-color;
+
+  @extend .flex-start;
+  @extend .flex-col;
+
+  .panel-item {
+    margin: 1.2rem 0;
+    font-size: 1.8rem;
+  }
+
+  .active {
+    color: $side-panel-icon-active-color !important;
+  }
+}
+
+.app-tabs {
+  @extend .flex-start;
+  @extend .v-baseline;
+
+  color: $app-tab-color;
+  // font-size: 1.4rem;
+
+  .tab-item {
+    @extend .enable-hover;
+    // text-transform: uppercase;
+    margin-left: 4rem;
+  }
+
+  .active {
+    font-weight: 700;
+    color: $app-tab-active-color;
+  }
+}
+
+.arrow-up {
+  transform: rotate(45deg);
+}
+
+.arrow-down {
+  transform: rotate(135deg);
+}
+
+.custom-chart {
+  svg {
+    font-family: 'Nunito Sans' !important;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="flex-start v-baseline header-container">
+
+  <!-- app title -->
+  <div class="app-title">BLOOM MARKETING</div>
+
+  <!-- tabs -->
+  <div class="flex-end tabs-container">
+    <div class="app-tabs">
+      <div *ngFor="let tab of tabs" class="tab-item" [ngClass]="{ 'active': tab?.active }" (click)="selectTab(tab)">
+        {{tab?.title}}
+      </div>
+    </div>
+  </div>
+
+</div>

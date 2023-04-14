@@ -1,0 +1,17 @@
+<div class="flex-start analytics-overview flex-col">
+
+  <div class="section-title">Overview</div>
+
+  <div class="flex-start overview-container">
+    <div *ngFor="let card of cards" class="card relative"
+      [ngClass]="[card?.subtitle?.toLowerCase().replace(' ', '-')]">
+      <div class="card-title">{{ card?.title }}</div>
+      <div class="card-sub-title text-center">{{ card?.subtitle }}</div>
+      <div class="card-additional-detail text-center">{{ card?.detail }}</div>
+
+      <div class="card-icon" [ngClass]="['arrow-' + card?.growth]">
+        <fa-icon [icon]="arrowIcon"></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>

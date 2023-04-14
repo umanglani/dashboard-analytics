@@ -1,0 +1,29 @@
+.performers-list {
+
+  .performer-list-item {
+    align-items: center;
+
+    margin: 1.5rem 0;
+
+    .image-col {
+      width: 10%;
+    }
+    .detail-col {
+      width: 40%;
+    }
+    .income-col {
+      width: 50%;
+
+      .income-bar {
+        background-color: #d1c4e3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        border-radius: 2px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+}
